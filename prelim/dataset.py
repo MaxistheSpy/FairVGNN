@@ -48,7 +48,7 @@ def build_relationship(x, thresh=0.25):
     return idx_map
 
 
-def load_credit(dataset, sens_attr="Age", predict_attr="NoDefaultNextMonth", path="dataset/credit/", label_number=1000):
+def load_credit(dataset, sens_attr="Age", predict_attr="NoDefaultNextMonth", path="prelim/dataset/credit/", label_number=1000):
     # print('Loading {} dataset from {}'.format(dataset, path))
     idx_features_labels = pd.read_csv(
         os.path.join(path, "{}.csv".format(dataset)))
@@ -129,7 +129,7 @@ def load_credit(dataset, sens_attr="Age", predict_attr="NoDefaultNextMonth", pat
     return edge_index, features, labels, train_mask, val_mask, test_mask, sens, header
 
 
-def load_bail(dataset, sens_attr="WHITE", predict_attr="RECID", path="dataset/bail/", label_number=1000):
+def load_bail(dataset, sens_attr="WHITE", predict_attr="RECID", path="prelim/dataset/bail/", label_number=1000):
     # print('Loading {} dataset from {}'.format(dataset, path))
     idx_features_labels = pd.read_csv(
         os.path.join(path, "{}.csv".format(dataset)))
@@ -215,7 +215,7 @@ def load_bail(dataset, sens_attr="WHITE", predict_attr="RECID", path="dataset/ba
     return edge_index, features, labels, train_mask, val_mask, test_mask, sens, header
 
 
-def load_german(dataset, sens_attr="Gender", predict_attr="GoodCustomer", path="dataset/german/", label_number=1000):
+def load_german(dataset, sens_attr="Gender", predict_attr="GoodCustomer", path="prelim/dataset/german/", label_number=1000):
     # print('Loading {} dataset from {}'.format(dataset, path))
     idx_features_labels = pd.read_csv(
         os.path.join(path, "{}.csv".format(dataset)))
